@@ -81,11 +81,21 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
-    background: linear-gradient(135deg, #D4AF37, #F0D060, #A88B20);
+    background: linear-gradient(
+        90deg,
+        #A88B20,
+        #D4AF37,
+        #F0D060,
+        #D4AF37,
+        #A88B20
+    );
+
+    background-size: 300% auto;
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    opacity: 0.95;
+    animation: goldWave 4s linear infinite;
 }
 
         /* ── Container ── */
@@ -143,6 +153,14 @@
             to   { opacity: 1; transform: translateY(0); }
         }
 
+        @keyframes goldWave {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 300% center;
+    }
+}
         /* ── Typography ── */
         h2 {
             font-size: 1.6rem;
